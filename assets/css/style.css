@@ -191,6 +191,9 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
+.cursor {
+  cursor: pointer;
+}
 .box_2 {
   max-width: 1170px;
   min-height: 323px;
