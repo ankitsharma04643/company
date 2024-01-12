@@ -72,6 +72,12 @@
 .fs_68 {
   font-size: var(--fs-xl) !important;
 }
+.shadow {
+  border-radius: 15px;
+  opacity: 0.12;
+  background: url(<path-to-image>), lightgray 0% 0% / 100px 100px repeat;
+  mix-blend-mode: overlay;
+}
 
 .bg-hero {
   background-image: url(/assets/img/png/hero-img.png);
@@ -240,6 +246,10 @@
   top: 50%;
   left: -4%;
 }
+.blue-positioning-blur {
+  top: -13%;
+  left: 48%;
+}
 
 .underline:hover::after {
   left: 0;
@@ -271,8 +281,8 @@
   align-items: center;
 }
 .py_184 {
-  padding-top: 184px !important;
-  padding-bottom: 184px !important;
+  padding-top: 184px;
+  padding-bottom: 184px;
 }
 
 .navbar1 {
@@ -296,6 +306,7 @@
   min-height: 100vh;
   width: 100%;
   top: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   position: fixed;
@@ -341,12 +352,12 @@
 }
 
 #button::after {
-  content: "^";
+  content: "";
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
-  font-size: 3em;
-  line-height: 65px;
+  font-size: 1em;
+  line-height: 40px;
   color: #fff;
 }
 
@@ -378,11 +389,20 @@
   color: #cfcfcf;
   transition: all linear 300ms;
 }
+span svg path:hover {
+  box-shadow: #0d0d0d;
+}
 
 .text_white:hover {
   color: #57b3fe;
 }
-
+.scale {
+  scale: 1;
+  transition: all linear 300ms;
+}
+.scale:hover {
+  scale: 1.2;
+}
 .w_20px {
   width: 20px;
   transition: all 300ms linear;
@@ -421,8 +441,8 @@
 
 @media (min-width: 1024px) {
   .py_184 {
-    padding-top: 184px !important;
-    padding-bottom: 184px !important;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .set_db_l_positioning {
@@ -437,10 +457,6 @@
     max-width: 173px;
     width: 100%;
   }
-  .pt_100 {
-    padding-top: -100px;
-  }
-
   .set_db_r_positioning {
     top: 18%;
     right: 0%;
@@ -459,8 +475,8 @@
   }
 
   .py_184 {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 184px;
+    padding-bottom: 184px;
   }
 }
 @media (max-width: 992px) {
@@ -488,8 +504,8 @@
   }
 
   .py_184 {
-    padding-top: 90px;
-    padding-bottom: 75px;
+    padding-top: 80px;
+    padding-bottom: 30px;
   }
   :root {
     --fs-nav: 5vw;
@@ -514,6 +530,10 @@
   .dashboard_img {
     transform: translatey(30%);
   }
+  .py_184 {
+    padding-top: 90px;
+    padding-bottom: 30px;
+  }
 
   .set_db_r_positioning {
     top: 18%;
@@ -537,6 +557,10 @@
     right: 1.6%;
     max-width: 120px !important;
   }
+  .py_184 {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
 
   .set_db_b_positioning {
     right: 4%;
@@ -549,8 +573,4 @@
     --fs-lg: 35px;
     --fs-xl: 40px;
   }
-}
-.py_184 {
-  padding-top: 184px !important;
-  padding-bottom: 184px !important;
 }
